@@ -9,7 +9,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 
-app.post('/contact', (req, res) => {
+app.post('/', (req, res) => {
   handleContact(req, res)
 })
 
