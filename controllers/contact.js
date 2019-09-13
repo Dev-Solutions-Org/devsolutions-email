@@ -32,7 +32,7 @@ const handleContact = async (req, res) => {
   const mailOptions = {
     replyTo: email,
     from: `"${name}" <${config.email}>`,
-    to: 'devsolutionsbusiness@gmail.com',
+    to: config.email,
     subject: `${name} se quiere poner en contacto contigo`,
     html: content
   }
