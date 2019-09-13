@@ -30,6 +30,7 @@ const handleContact = async (req, res) => {
     replyTo: email,
     from: `"${name}" <${config.email}>`,
     to: config.email,
+    cc: config.email2,
     subject: `${name} se quiere poner en contacto contigo`,
     html: content
   }
