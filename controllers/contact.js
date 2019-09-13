@@ -8,17 +8,14 @@ const handleContact = async (req, res) => {
     return res.status(400).json('Por favor, ingrese todos los campos.')
   }
 
-  const content = `<p>
-    Hola, DevSolutions. Alguien se ha puesto en contacto contigo 
-    mediante la página. <br/>
+  const content = `
+    <p> Hola, DevSolutions. Alguien se ha puesto en contacto contigo mediante la página.</p>
 
-    Nombre: ${name} <br/>
-    Correo: <b>${email}</b> <br/>
-    Mensaje: ${message}  <br/>
+    Nombre: ${name} <br />
+    Correo: <b>${email}</b> <br />
+    Mensaje: ${message}  <br />
 
-    Te recomendamos que respondas pronto. Feliz día.
-
-    </p>
+    <p>Te recomendamos que respondas pronto. Feliz día.</p>
   `
 
   const transporter = nodemailer.createTransport({
