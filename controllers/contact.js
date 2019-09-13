@@ -21,11 +21,8 @@ const handleContact = async (req, res) => {
     </p>
   `
 
-
   const transporter = nodemailer.createTransport({
-    host: 'smtp.migadu.com',
-    port: 587,
-    secure: false,
+    service: 'gmail',
     auth: {
       user: config.email,
       pass: config.password
